@@ -1,5 +1,5 @@
 <?php
-    include 'connect.php';
+include 'connect.php';
 ?>
 
 <table class="table">
@@ -17,36 +17,35 @@
   </thead>
   <tbody class="table-group-divider">
 
-  <?php
+    <?php
     $sql = "select * from `newbook`";
-    $result = mysqli_query($con,$sql);
-    if($result){
-        while($row=mysqli_fetch_assoc($result)){
-            $isbn = $row ['isbn'];
-            $title=$row['title'];
-            $publisher=$row['publisher'];
-            $year=$row['year'];
-            $category=$row['category'];
-            $quentity=$row['quentity'];
-            $author=$row['author'];
+    $result = mysqli_query($con, $sql);
+    if ($result) {
+      while ($row = mysqli_fetch_assoc($result)) {
+        $isbn = $row['isbn'];
+        $title = $row['title'];
+        $publisher = $row['publisher'];
+        $year = $row['year'];
+        $category = $row['category'];
+        $quentity = $row['quentity'];
+        $author = $row['author'];
 
-            echo'<tr>
-                    <th scope="row">'.$isbn.'</th>
-                    <td>'.$title.'</td>
-                    <td>'.$publisher.'</td>
-                    <td>'.$year.'</td>
-                    <td>'.$category.'</td>
-                    <td>'.$quentity.'</td>
-                    <td>'.$author.'</td>
+        echo '<tr>
+                    <th scope="row">' . $isbn . '</th>
+                    <td>' . $title . '</td>
+                    <td>' . $publisher . '</td>
+                    <td>' . $year . '</td>
+                    <td>' . $category . '</td>
+                    <td>' . $quentity . '</td>
+                    <td>' . $author . '</td>
                     <td>
-                        <button class="btn btn-info"><a href="book_update.php?updateid='.$isbn.'" class="text-light">Update</a></button>
-                        <button class="btn btn-danger"><a href="book_delete.php?deleteid='.$isbn.'" class="text-light">Delete</a></button>           
+                        <button class="btn btn-info"><a href="book_update.php?updateid=' . $isbn . '" class="text-light">Update</a></button>
+                        <button class="btn btn-danger"><a href="book_delete.php?deleteid=' . $isbn . '" class="text-light">Delete</a></button>           
                     </td> 
                  </tr>';
-        }
+      }
     }
-  ?>   
+    ?>
 
   </tbody>
 </table>
-

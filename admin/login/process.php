@@ -16,7 +16,7 @@ if (isset($_POST['login'])) {
         if ($row = mysqli_fetch_assoc($result)) {
             $_SESSION['user'] = $_POST['user'];
             header("location: ../index.php");
-            } else {
+        } else {
             header("location: login.php?Invalid=" . urlencode("Please enter correct username and password."));
             exit();
         }
@@ -24,4 +24,3 @@ if (isset($_POST['login'])) {
 } else {
     echo 'Not working';
 }
-?>

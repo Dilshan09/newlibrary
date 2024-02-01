@@ -15,10 +15,10 @@
   </div>
 </footer>
 
-  </main>
-  <script src="assets/js/bootstrap.bundle.min.js"></script> <!-- bootstrap link -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- for easyness of alert -->
- 
-  </body>
+</main>
+<script src="assets/js/bootstrap.bundle.min.js"></script> <!-- bootstrap link -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- for easyness of alert -->
+
+</body>
 
 </html>

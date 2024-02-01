@@ -18,6 +18,6 @@ class ReturnTest extends TestCase
         echo $result;
 
         // Assert that the result is as expected
-        $this->assertTrue($title !== null , $result);
+        $this->assertTrue($title !== null, $result);
     }
 }

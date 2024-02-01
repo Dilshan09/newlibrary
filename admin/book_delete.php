@@ -3,15 +3,15 @@
 </head>
 
 <?php
-    include 'connect.php';
-    if(isset($_GET['deleteid'])){
-        $id=$_GET['deleteid'];
+include 'connect.php';
+if (isset($_GET['deleteid'])) {
+    $id = $_GET['deleteid'];
 
-        $sql = "DELETE FROM `newbook` WHERE isbn=$id";
-        $result = mysqli_query($con, $sql);
-        
-        if($result){
-            echo '<script>
+    $sql = "DELETE FROM `newbook` WHERE isbn=$id";
+    $result = mysqli_query($con, $sql);
+
+    if ($result) {
+        echo '<script>
                 document.addEventListener("DOMContentLoaded", function() {
                     Swal.fire({
                         title: "Success!",
@@ -24,9 +24,8 @@
                     });
                 });
             </script>';
-
-        } else {
-            die(mysqli_error($con));
-        }    
+    } else {
+        die(mysqli_error($con));
     }
+}
 ?>

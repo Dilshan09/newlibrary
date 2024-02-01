@@ -2,13 +2,12 @@
 
 $servername = "localhost";
 $username = "root";
-$password = ""; 
+$password = "";
 $dbname = "library";
 
 // Create connection
 $con = new mysqli($servername, $username, $password, $dbname);
 
-if(!$con){
+if (!$con) {
     die(mysqli_error($con));
 }
-?>
